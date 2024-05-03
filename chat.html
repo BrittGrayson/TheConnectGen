@@ -1,0 +1,428 @@
+<style>
+  .container {
+    background-color: #f5f5f5;
+    display: flex;
+    max-width: 480px;
+    width: 100%;
+    padding: 20px 0 0;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 12px;
+    color: #000;
+    font-weight: 700;
+    padding: 0 21px;
+  }
+
+  .logo {
+    font: 36px "Playfair Display", sans-serif;
+  }
+
+  .connects {
+    display: flex;
+    margin-top: 40px;
+    gap: 19px;
+  }
+
+  .connect-card {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 33px 15px 0;
+  }
+
+  .connect-text {
+    font-family: "Barlow", sans-serif;
+  }
+
+  .profile-img {
+    aspect-ratio: 1.02;
+    object-fit: cover;
+    object-position: center;
+    width: 51px;
+    border-radius: 50%;
+    align-self: center;
+    z-index: 10;
+    margin-top: 6px;
+  }
+
+  .gym-card {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 42px 23px 0;
+  }
+
+  .gym-text {
+    font-family: "Barlow", sans-serif;
+  }
+
+  .gym-img {
+    aspect-ratio: 1.02;
+    object-fit: cover;
+    object-position: center;
+    width: 51px;
+    border-radius: 50%;
+    align-self: center;
+    z-index: 10;
+    margin-top: 9px;
+  }
+
+  .create-card {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    flex: 1;
+    padding: 55px 5px 2px;
+  }
+
+  .create-img {
+    aspect-ratio: 1.02;
+    object-fit: cover;
+    object-position: center;
+    width: 51px;
+    background-color: #fff;
+    border-radius: 50%;
+    align-self: center;
+    height: 51px;
+  }
+
+  .create-text {
+    font-family: "Barlow", sans-serif;
+    margin-top: 41px;
+  }
+
+  .timestamp {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    align-self: end;
+    margin-top: 35px;
+  }
+
+  .chats {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #000;
+    font-weight: 400;
+    padding: 0 24px;
+  }
+
+  .chat {
+    display: flex;
+    gap: 19px;
+  }
+
+  .chat-img {
+    aspect-ratio: 1.11;
+    object-fit: cover;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  .chat-content {
+    align-self: start;
+    display: flex;
+    margin-top: 14px;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: fit-content;
+  }
+
+  .chat-name {
+    font: 14px "Playfair Display", sans-serif;
+  }
+
+  .chat-message {
+    margin-top: 11px;
+    font: 12px "Barlow", sans-serif;
+  }
+
+  .chat-group {
+    display: flex;
+    margin-top: 35px;
+    gap: 20px;
+  }
+
+  .-group-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: fit-content;
+  }
+
+  .chat-group-img {
+    aspect-ratio: 1.11;
+    object-fit: cover;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  .chat-group-name {
+    font: 14px "Playfair Display", sans-serif;
+  }
+
+  .chat-group-message {
+    margin-top: 9px;
+    font: 12px "Barlow", sans-serif;
+  }
+
+  .chat-bridget {
+    display: flex;
+    margin-top: 46px;
+    gap: 9px;
+  }
+
+  .chat-bridget-img {
+    aspect-ratio: 1.11;
+    object-fit: cover;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  .chat-bridget-content {
+    align-self: end;
+    display: flex;
+    margin-top: 23px;
+    flex-direction: column;
+  }
+
+  .chat-bridget-name {
+    font: 14px "Playfair Display", sans-serif;
+  }
+
+  .chat-bridget-message {
+    margin-top: 12px;
+    font: 12px "Barlow", sans-serif;
+  }
+
+  .chat-traci {
+    display: flex;
+    margin-top: 62px;
+    gap: 13px;
+  }
+
+  .chat-traci-img {
+    aspect-ratio: 1.11;
+    object-fit: cover;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  .chat-traci-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+  }
+
+  .chat-traci-name {
+    font: 14px "Playfair Display", sans-serif;
+  }
+
+  .chat-traci-message {
+    margin-top: 17px;
+    font: 12px "Barlow", sans-serif;
+  }
+
+  .chat-hailey {
+    display: flex;
+    margin-top: 44px;
+    gap: 12px;
+  }
+
+  .chat-hailey-img {
+    aspect-ratio: 1.11;
+    object-fit: cover;
+    object-position: center;
+    width: 72px;
+    border-radius: 50%;
+  }
+
+  .chat-hailey-content {
+    align-self: start;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+  }
+
+  .chat-hailey-name {
+    font: 14px "Playfair Display", sans-serif;
+  }
+
+  .chat-hailey-message {
+    margin-top: 12px;
+    font: 12px "Barlow", sans-serif;
+  }
+
+  .chat-timestamps {
+    align-self: start;
+    display: flex;
+    margin-top: 17px;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .chat-timestamp-kathy {
+    font-family: "Barlow", sans-serif;
+  }
+
+  .chat-timestamp-rosalyn {
+    font-family: "Barlow", sans-serif;
+    margin-top: 95px;
+  }
+
+  .chat-timestamp-bridget {
+    font-family: "Barlow", sans-serif;
+    margin-top: 114px;
+  }
+
+  .chat-timestamp-traci {
+    font-family: "Barlow", sans-serif;
+    margin-top: 112px;
+  }
+
+  .footer {
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    display: flex;
+    margin-top: 65px;
+    width: 100%;
+    align-items: start;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 19px 43px;
+  }
+
+  .footer-icon-wrapper {
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #000;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+  }
+
+  .footer-icon-home {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    width: 12px;
+  }
+
+  .footer-icon-calendar {
+    aspect-ratio: 1.18;
+    object-fit: cover;
+    object-position: center;
+    width: 26px;
+    fill: #000;
+  }
+
+  .footer-icon-chat {
+    aspect-ratio: 1.28;
+    object-fit: cover;
+    object-position: center;
+    width: 32px;
+    fill: #000;
+  }
+</style>
+
+<div class="container">
+  <header class="header">
+    <div class="logo">CG.</div>
+    <div class="connects">
+      <div class="connect-card">
+        <div class="connect-text">
+          Anyone want to watch the new episode of Abott Elementary with me?
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9884fb5861a10f4dedb0080c7dd9ca0d64368cd7632dc4cbb5347389a7c9fdd?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Profile image" class="profile-img" />
+      </div>
+      <div class="gym-card">
+        <div class="gym-text">
+          I need a gym buddy tomorrow. I am doing lower body.
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c7ef25a702b9452ce02ecdc61bdd8b4fbdf00129a6103ff98cca18a4d1fec1bb?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Gym buddy image" class="gym-img" />
+      </div>
+      <div class="create-card">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9ffe4f0b05bf57456d67186aeb9592859f9a0d99677422966e47d706bffa72e?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Create connect image" class="create-img" />
+        <div class="create-text">Create your connect</div>
+      </div>
+    </div>
+    <div class="timestamp">1:40 PM</div>
+  </header>
+  <section class="chats">
+    <div class="chat">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f3b805c81660303a2dbce1304e86f1cc09454684739bb20f969bd2403a0270a?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Kathy profile image" class="chat-img" />
+      <div class="chat-content">
+        <div class="chat-name">Kathy</div>
+        <div class="chat-message">Kathy: OMG you watch One Piece too??</div>
+      </div>
+    </div>
+    <div class="chat-group">
+      <div class="chat-group-content">
+        <div class="chat">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/19676992ce4b1f70e377ade2684a1a8be2120f32f791325ff053934d7e701694?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Rosalyn profile image" class="chat-group-img" />
+          <div class="chat-content">
+            <div class="chat-group-name">Rosalyn</div>
+            <div class="chat-group-message">
+              Rosalyn: I would love for you to join my book club group!
+            </div>
+          </div>
+        </div>
+        <div class="chat-bridget">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/819792d0d8f5f2b5d05616518bbfb4cc2baeaee6bbc31d2603be777e9bb40906?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Bridget profile image" class="chat-bridget-img" />
+          <div class="chat-bridget-content">
+            <div class="chat-bridget-name">Bridget</div>
+            <div class="chat-bridget-message">Bridget: Hey Zuri, how are you?</div>
+          </div>
+        </div>
+        <div class="chat-traci">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d24393331b219faf86c99af48898a35ef182eb419934c7e659ba38d84e047733?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Traci profile image" class="chat-traci-img" />
+          <div class="chat-traci-content">
+            <div class="chat-traci-name">Traci</div>
+            <div class="chat-traci-message">
+              Traci: We should totally schedule to meet up! I can't wait!!
+            </div>
+          </div>
+        </div>
+        <div class="chat-hailey">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/28d097d7091f5f3cc1fcee27d8088305db797b59ca35490581ed35d1c40c61b2?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Hailey profile image" class="chat-hailey-img" />
+          <div class="chat-hailey-content">
+            <div class="chat-hailey-name">Hailey</div>
+            <div class="chat-hailey-message">
+              You: That yoga class was so much fun!! Lets connect again soon
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-timestamps">
+        <div class="chat-timestamp-kathy">1:30 PM</div>
+        <div class="chat-timestamp-rosalyn">11:23 AM</div>
+        <div class="chat-timestamp-bridget">Yesterday</div>
+        <div class="chat-timestamp-traci">Yesterday</div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer">
+  <div class="footer-icon-wrapper">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/db708ff2e638dc313db97ccd0985db11e4a2cc42a6f4301b6ce22fcc78629fb6?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Home icon" class="footer-icon-home" />
+  </div>
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/88eb4dbc4ff15f70f868ae2bab42d6b8f9ab1773e7e5070e86fd5c5722e9b88f?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Calendar icon" class="footer-icon-calendar" />
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2281429452d8a1d13df71262cfc37546de4ddd30ce90c3f86058f1705d5c0d0f?apiKey=4894e72edc7543148a18d116eaf33494&" alt="Chat icon" class="footer-icon-chat" />
+</footer>
